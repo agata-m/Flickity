@@ -51,6 +51,9 @@
     "onchange": "^5.2.0"
   },
   "dependencies": {
+    "flickity": "^2.2.1",
+    "flickity-hash": "^1.0.3",
+    "jquery": "^3.4.1",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.3"
   }

@@ -5,13 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flickity</title>
         <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+        <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css" media="screen">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-
-
+        <div class="main-carousel"> 
+            <div class="carousel-cell flex" id="cell-1" style="background-image:url('/images/china.jpg');">
+                <div class="container flex">
+                    <div class="text">The Great Wall of China</div>
+                </div>
+            </div>
+            <div class="carousel-cell flex" id="cell-2" style="background-image:url('/images/khao.jpg');">
+                <div class="container flex">
+                    <div class="text">Khao San Road</div>
+                </div>
+            </div>
+            <div class="carousel-cell flex" id="cell-3" style="background-image:url('/images/london.jpg');">
+                <div class="container flex">
+                    <div class="text">London Eye</div>
+                </div>
+            </div>
+            <div class="carousel-cell flex" id="cell-4" style="background-image:url('/images/toubkal.jpg');">
+                <div class="container flex">
+                    <div class="text">Toubkal</div>
+                </div>
+            </div>
+            <div class="carousel-cell flex" id="cell-5" style="background-image:url('/images/vienna.jpg');">
+                <div class="container flex">
+                    <div class="text">Schobrunn Palace</div>
+                </div>
+            </div>
+        </div>
+        <div class="progress-bar"></div>
+        <button id="restart">Restart</button>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="/vendor/flickity.pkgd.min.js"></script>
+        <script src="/vendor/flickity-hash.js"></script>
         <script src="/js/script.js"></script>
     </body>
 </html>
