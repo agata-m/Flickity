@@ -1,3 +1,25 @@
+// MUSTACHE TEMPLATE
+
+(function() {
+
+  var templateSlide = document.getElementById('newSlide').innerHTML;
+  Mustache.parse(templateSlide);
+
+  var slides = '';
+
+
+  for( var i = 0; i < newCarousel.length; i++ ) {
+    console.log(newCarousel);
+    slides += Mustache.render(templateSlide, newCarousel[i]);
+  }
+
+  var printOut = document.getElementById('printOut');
+
+  printOut.insertAdjacentHTML('beforeend', slides);
+
+})();
+
+
 // JS carousel
 
 var elem = document.querySelector('.main-carousel');

@@ -9,38 +9,51 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <div class="main-carousel"> 
-            <div class="carousel-cell flex" id="cell-1" style="background-image:url('/images/china.jpg');">
-                <div class="container flex">
-                    <div class="text">The Great Wall of China</div>
-                </div>
-            </div>
-            <div class="carousel-cell flex" id="cell-2" style="background-image:url('/images/khao.jpg');">
-                <div class="container flex">
-                    <div class="text">Khao San Road</div>
-                </div>
-            </div>
-            <div class="carousel-cell flex" id="cell-3" style="background-image:url('/images/london.jpg');">
-                <div class="container flex">
-                    <div class="text">London Eye</div>
-                </div>
-            </div>
-            <div class="carousel-cell flex" id="cell-4" style="background-image:url('/images/toubkal.jpg');">
-                <div class="container flex">
-                    <div class="text">Toubkal</div>
-                </div>
-            </div>
-            <div class="carousel-cell flex" id="cell-5" style="background-image:url('/images/vienna.jpg');">
-                <div class="container flex">
-                    <div class="text">Schobrunn Palace</div>
-                </div>
-            </div>
+        <div class="main-carousel" id="printOut">
         </div>
         <div class="progress-bar"></div>
         <button id="restart">Restart</button>
+
+
+        <script id="newSlide" type="x-tmpl-mustache">
+            <div class="carousel-cell flex" id=" {{ id }} " style="background-image: url(' {{ image }} ');">
+                <div class="container flex">
+                    <div class="text">
+                        <h3> {{ title }} </h3>
+                        {{{ description }}}
+                    </div>
+                </div>
+            </div>
+        </script>
+
+
+        <script>
+            var newCarousel = [
+                {
+                    image: 'images/china.jpg',
+                    id: 'cell-1',
+                    title: 'China',
+                    description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+                },
+                {
+                    image: 'images/toubkal.jpg',
+                    id: 'cell-2',
+                    title: 'Morrocco',
+                    description: '<p>Ipsum ipsum.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+                },
+                {
+                    image: 'images/khao.jpg',
+                    id: 'cell-3',
+                    title: 'Thailand',
+                    description: '<p>Dolor dolor.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+                },
+            ];
+        </script>
+
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="/vendor/flickity.pkgd.min.js"></script>
-        <script src="/vendor/flickity-hash.js"></script>
-        <script src="/js/script.js"></script>
+        <script src="vendor/flickity.pkgd.min.js"></script>
+        <script src="vendor/flickity-hash.js"></script>
+        <script src="vendor/mustache.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
