@@ -53,8 +53,6 @@ $carousel.on( 'scroll.flickity', function( event, progress ) {
 
 function initMap() {
 
-	var places = document.getElementById('places');
-
 	var china = newCarousel[0].coords;
 	var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: china});
     
@@ -66,6 +64,16 @@ function initMap() {
         	var location = newCarousel[i].coords;
 			var newMarker = new google.maps.Marker({position: location, map: map});
 		}
+	
+		newMarker.addListener( 'click', function(i) {
+			flkty.select(i);
+		});
+
+		flkty.on( 'change', function(i) {
+			var changeLocation = newCarousel[i].coords;
+			map.panTo(changeLocation);
+		});
+		
 	}
 
 };  
