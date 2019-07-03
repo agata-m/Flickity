@@ -13,6 +13,9 @@
         </div>
         <div class="progress-bar"></div>
         <button id="restart">Restart</button>
+        
+        <p id="places"></p>
+        <div id="map"></div>
 
 
         <script id="newSlide" type="x-tmpl-mustache">
@@ -34,18 +37,21 @@
                     id: 'cell-1',
                     title: 'China',
                     description: '<p>Lorem lorem.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+                    coords: {lat: 40.255, lng: 116.341},
                 },
                 {
                     image: 'images/toubkal.jpg',
                     id: 'cell-2',
                     title: 'Morrocco',
                     description: '<p>Ipsum ipsum.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+                    coords: {lat: 31.033, lng: -7.545},
                 },
                 {
                     image: 'images/khao.jpg',
                     id: 'cell-3',
                     title: 'Thailand',
                     description: '<p>Dolor dolor.</p> <img src="http://via.placeholder.com/200x100" alt="Photo placeholder">',
+                    coords3: {lat: 13.451, lng: 100.292},
                 },
             ];
         </script>
@@ -54,6 +60,7 @@
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="vendor/flickity-hash.js"></script>
         <script src="vendor/mustache.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF-ZmNpFpBdCiZEPvmdQLALUjrKODDZGs&callback=initMap"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -7,7 +7,6 @@
 
   var slides = '';
 
-
   for( var i = 0; i < newCarousel.length; i++ ) {
     console.log(newCarousel);
     slides += Mustache.render(templateSlide, newCarousel[i]);
@@ -46,6 +45,29 @@ var $carousel = $('.main-carousel').flickity();
 var $progressBar = $('.progress-bar');
 
 $carousel.on( 'scroll.flickity', function( event, progress ) {
-  progress = Math.max( 0, Math.min( 1, progress ) );
-  $progressBar.width( progress * 100 + '%' );
+  	progress = Math.max( 0, Math.min( 1, progress ) );
+ 	$progressBar.width( progress * 100 + '%' );
 });
+
+// GOOGLE MAPS
+
+function initMap() {
+
+	var places = document.getElementById('places');
+    
+	for (var i = 0; i < newCarousel.length; i++ ) {
+
+		var key = 'coords';
+		  
+      	if( key === 'coords') {
+        	var location = newCarousel[i].coords;
+			var newMarker = new google.maps.Marker({position: location, map: map});
+		}
+		  
+	var china = newCarousel[0].coords;
+
+	}
+
+	var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: china});
+
+};  
