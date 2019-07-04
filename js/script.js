@@ -60,10 +60,10 @@ function initMap() {
 		  
       	if( key = 'coords') {
         	var location = newCarousel[i].coords;
-			var newMarker = new google.maps.Marker({position: location, map: map});
+			var newMarker = new google.maps.Marker({position: location, map: map, index: i});
 
 			newMarker.addListener( 'click', function() {
-				flkty.select( i );
+				flkty.select( this.index );
 			});
 		}
 	
