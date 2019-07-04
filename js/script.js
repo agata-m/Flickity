@@ -59,11 +59,9 @@ function initMap() {
 	var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: china});
     
 	for (var i = 0; i < newCarousel.length; i++ ) {
-
-		var key = 'coords';
 		  
-      	if( key === 'coords') {
-        	var location = newCarousel[i].coords;
+      		if( key = 'coords') {
+        		var location = newCarousel[i].coords;
 			var newMarker = new google.maps.Marker({position: location, map: map});
 		}
 	}
