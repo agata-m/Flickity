@@ -58,15 +58,13 @@ function initMap() {
     
 	for (var i = 0; i < newCarousel.length; i++ ) {
 		  
-      	if( key = 'coords') {
-        	var location = newCarousel[i].coords;
-			var newMarker = new google.maps.Marker({position: location, map: map, index: i});
+		var location = newCarousel[i].coords;
+		var newMarker = new google.maps.Marker({position: location, map: map, index: i});
 
-			newMarker.addListener( 'click', function() {
-				flkty.select( this.index );
-			});
-		}
-	
+		newMarker.addListener( 'click', function() {
+			flkty.select( this.index );
+		});
+
 		flkty.on( 'change', function(i) {
 			var changeLocation = newCarousel[i].coords;
 			map.panTo(changeLocation);
